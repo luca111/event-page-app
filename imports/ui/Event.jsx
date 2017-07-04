@@ -18,7 +18,7 @@ export default class Event extends Component {
   }
   render() {
     const eventTopDivStyle = {
-      backgroundImage: 'url(' + "images/intro_top_image.jpg" + ')',
+      backgroundImage: 'url(' + this.props.eventToDisplay.eventImage + ')',
       backgroundSize: 'cover',
       height: '60vh'
     }

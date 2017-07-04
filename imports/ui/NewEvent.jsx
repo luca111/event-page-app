@@ -32,7 +32,7 @@ export default class NewEvent extends Component {
             <input type='text' className='form-control' ref='eventDescription' defaultValue={this.props.eventPlanningDetails.eventDescription} required />
           </div>
           <div className='form-group'>
-            <label htmlFor='eventImage'>Please enter the event image</label>
+            <label htmlFor='eventImage'>Please enter an image to use for background</label>
             <input type='file' className='form-control' ref='eventImage' id='eventImage' onChange={(e) => {this.prepareImagePreview(e)}} required />
           </div>
         </div>
@@ -60,7 +60,7 @@ export default class NewEvent extends Component {
             <input type='text' className='form-control' ref='eventDescription' placeholder='Please enter the event description' required />
           </div>
           <div className='form-group'>
-            <label htmlFor='eventImage'>Please enter the event image</label>
+            <label htmlFor='eventImage'>Please enter an image to use for background</label>
             <input type='file' className='form-control' ref='eventImage' id='eventImage' onChange={(e) => {this.prepareImagePreview(e)}} required />
           </div>
         </div>
