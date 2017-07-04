@@ -20,14 +20,18 @@ export default class Intro extends Component {
       marginLeft: 'auto',
       marginRight: 'auto'
     }
-    const goToSignIn = function() {
-      document.getElementById('login-sign-in-link').click()
+    const startButtonClick = () => {
+      if(!this.props.currentUser) {
+        document.getElementById('login-sign-in-link').click()
+      } else {
+        this.props.history.push('/myevents');
+      }
     }
     return (
       <div>
         <div style={introTopStyle}>
           <h1 style={introCaptionStyle}>Create an event page in minutes<br />for free</h1>
-          <button style={introTopStartButtonStyle} className="btn btn-success btn-lg" onClick={goToSignIn}>Let's go</button>
+          <button style={introTopStartButtonStyle} className="btn btn-success btn-lg" onClick={startButtonClick}>Let's go</button>
         </div>
       </div>
     )

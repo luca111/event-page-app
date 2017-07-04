@@ -30,8 +30,10 @@ class App extends Component {
 }
 
 export default createContainer(() => {
+  Meteor.subscribe('events');
+  Meteor.subscribe('eventsAttendees');
   return {
-    currentUser: Meteor.user(),
+    currentUser: Meteor.userId(),
     events: Events.find({}).fetch()
   }
 }, App);
