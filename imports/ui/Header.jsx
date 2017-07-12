@@ -2,35 +2,46 @@ import React, { Component } from 'react';
 
 import Accounts from './Accounts.jsx';
 
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, NavLink } from 'react-router-dom';
 
 export default class Header extends Component {
   render() {
     const headerStyle = {
-      height: '5vh',
-      display: 'flex',
-      alignItems: 'center',
-      marginBottom: '-20px',
-      color: '#ddd',
-      backgroundColor: '#333',
+      backgroundColor: '#212121',
+      marginBottom: '-25px',
+      height: '12vh'
     }
-    const logoStyle = {
-      fontFamily: 'Tahoma, Geneva, sans-serif',
+    const navbarStyle = {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-around'
     }
     return (
-      <header style={headerStyle}>
+      <header className='mdc-toolbar' style={headerStyle}>
         { this.props.currentUser? (
-            <div className='col-sm-12'>
-              <Link to='/myevents'><h4 className='col-sm-3' style={logoStyle}>Events Page App</h4></Link>
-              <Link to='/newevent'><h4 className='col-sm-3' style={logoStyle}>Create Event</h4></Link>
-              <Link to='myevents'><h4 className='col-sm-3' style={logoStyle}>My Events</h4></Link>
-              <h4 className='col-sm-3 pull-right'><Accounts /></h4>
+            <div className='mdc-toolbar__row'>
+              <section className='mdc-toolbar__section mdc-toolbar__section--align-start'>
+                <Link to='/myevents' className='material-icons mdc-toolbar__icon--menu'><h4 style={{fontFamily: 'Gloria Hallelujah, cursive'}}>Events Page App</h4></Link>
+              </section>
+              <section className='mdc-toolbar__section mdc-toolbar__section--align-start'>
+                <NavLink to='/newevent' className='material-icons mdc-toolbar__icon--menu' style={{textDecoration: 'none'}}><h4>Create Event</h4></NavLink>
+              </section>
+              <section className='mdc-toolbar__section mdc-toolbar__section--align-start'>
+                <NavLink to='myevents' className='material-icons mdc-toolbar__icon--menu' style={{textDecoration: 'none'}}><h4>My Events</h4></NavLink>
+              </section>
+              <section className='mdc-toolbar__section mdc-toolbar__section--align-start'>
+                <h4 className='mdc-toolbar__icon--menu' style={{textDecoration: 'none'}}><Accounts /></h4>
+              </section>
             </div>
           ) :
           (
-            <div className='col-sm-12'>
-              <h4 className='col-sm-offset-1 col-sm-4' style={logoStyle}><Link to='/'>Events Page App</Link></h4>
-              <h4 className='col-sm-offset-3 col-sm-4 pull-right'><Accounts /></h4>
+            <div className='mdc-toolbar__row'>
+              <section className='mdc-toolbar__section'>
+                <Link to='/myevents' className='material-icons mdc-toolbar__icon--menu' style={{textDecoration: 'none'}}><h4 style={{fontFamily: 'Gloria Hallelujah, cursive'}}>Events Page App</h4></Link>
+              </section>
+              <section className='mdc-toolbar__section'>
+                <h4 className='mdc-toolbar__icon--menu' style={{textDecoration: 'none'}}><Accounts /></h4>
+              </section>
             </div>
           )
         }

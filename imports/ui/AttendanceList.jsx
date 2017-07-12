@@ -8,9 +8,9 @@ export default class AttendanceList extends Component {
         return attendanceDetails.attendeesDetails.map((attendant, index) => {
           return (
             <tr key={index}>
-              <td>{attendant.firstName}</td>
-              <td>{attendant.lastName}</td>
-              <td>{attendant.email}</td>
+              <td className='mdl-data-table__cell--non-numeric'>{attendant.firstName}</td>
+              <td className='mdl-data-table__cell--non-numeric'>{attendant.lastName}</td>
+              <td className='mdl-data-table__cell--non-numeric'>{attendant.email}</td>
             </tr>
           )
         });
@@ -18,21 +18,27 @@ export default class AttendanceList extends Component {
       } else {
         return (
           <tr>
-            <td>No attendees registered</td>
+            <td colSpan='3' style={{textAlign: 'center'}}>No attendees registered</td>
           </tr>
         )
       }
     }
+    const attendantsTableDivStyle = {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      marginBottom: '10vh'
+    }
     return (
       <div>
-        <h2>Attendance List</h2>
-        <div className='table-responsive'>
-          <table className='table'>
+        <h2 style={{marginTop: '8vh', textAlign: 'center'}}>Attendance List</h2>
+        <div style={attendantsTableDivStyle}>
+          <table className='mdl-data-table mdl-js-data-table'>
             <thead>
               <tr>
-                <th>First name</th>
-                <th>Last name</th>
-                <th>Email</th>
+                <th className='mdl-data-table__cell--non-numeric'>First name</th>
+                <th className='mdl-data-table__cell--non-numeric'>Last name</th>
+                <th className='mdl-data-table__cell--non-numeric'>Email</th>
               </tr>
             </thead>
             <tbody>

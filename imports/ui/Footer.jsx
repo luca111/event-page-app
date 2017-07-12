@@ -5,8 +5,9 @@ export default class Footer extends Component {
     const footerStyle = {
       color: '#ddd',
       backgroundColor: '#333',
-      height: '60px',
+      height: '70px',
       display: 'flex',
+      flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-around'
     }

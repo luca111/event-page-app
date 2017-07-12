@@ -51,7 +51,7 @@ class Main extends Component {
         location: undefined,
         maxAttendees: undefined,
         eventDescription: undefined,
-        eventImage: undefined  
+        eventImage: undefined
       }
     });
   }
@@ -74,8 +74,11 @@ class Main extends Component {
         <Route key={index} path={eventPath} render={(props) => <Event {...props} eventToDisplay={event} prepareRsvp={this.prepareRsvp.bind(this)} />} />
       )
     })
+    const mainStyle = {
+      minHeight: '80vh'
+    }
     return (
-      <div>
+      <div style={mainStyle}>
         <Route exact path='/' render={props => <Intro {...props} currentUser={this.props.currentUser} />} />
         <Route path='/myevents' render={props => <MyEvents {...props} currentUser={this.props.currentUser} events={this.props.events} prepareAttendanceList={this.prepareAttendanceList.bind(this)} />} />
         <Route path='/newevent' render={(props) => (

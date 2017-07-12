@@ -5,12 +5,13 @@ export default class Intro extends Component {
     const introTopStyle = {
       backgroundImage: 'url(' + "images/intro_top_image.jpg" + ')',
       backgroundSize: 'cover',
-      height: '95vh'
+      height: '88vh'
     }
     const introCaptionStyle = {
       textAlign: 'center',
       position: 'relative',
-      top: '25vh'
+      top: '25vh',
+      fontFamily: 'Roboto, sans-serif'
     }
     const introTopStartButtonStyle = {
       textAlign: 'center',
@@ -30,8 +31,8 @@ export default class Intro extends Component {
     return (
       <div>
         <div style={introTopStyle}>
-          <h1 style={introCaptionStyle}>Create an event page in minutes<br />for free</h1>
-          <button style={introTopStartButtonStyle} className="btn btn-success btn-lg" onClick={startButtonClick}>Let's go</button>
+          <h2 style={introCaptionStyle}>Create an event page in minutes<br />for free</h2>
+          <button className='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' style={introTopStartButtonStyle} onClick={startButtonClick}>Let's go</button>
         </div>
       </div>
     )
