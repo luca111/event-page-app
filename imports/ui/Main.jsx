@@ -38,6 +38,7 @@ class Main extends Component {
       }
     });
     this.props.history.push('/preview');
+    scroll(0,0);
   }
   modifyPreview() {
     this.props.history.push('/newevent');

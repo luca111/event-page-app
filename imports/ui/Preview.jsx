@@ -17,21 +17,29 @@ export default class Preview extends Component {
       backgroundSize: 'cover',
       height: '88vh'
     }
-    const eventTitleStyle = {
+    const eventTitleDivStyle = {
+      paddingTop: '8vh'
+    }
+    const eventInfoStyle = {
       textAlign: 'center',
-      paddingTop: '15vh'
+      color: '#ddd',
+      background: 'radial-gradient(rgba(0,0,0,0.20),rgba(0,0,0,0))',
+      padding: '3vh 3vw 3vh 3vw',
+      width: '50vw',
+      marginLeft: 'auto',
+      marginRight: 'auto'
     }
     const eventTimePlaceStyle = {
       textAlign: 'center',
-      marginTop: '30vh'
+      marginTop: '6vh'
     }
     const eventOrganizerStyle = {
       textAlign: 'center',
-      marginTop: '5vh'
+      marginTop: '1vh'
     }
     const rsvpButtonStyle = {
       textAlign: 'center',
-      marginTop: '5vh'
+      marginTop: '1vh'
     }
     const eventPageBottomStyle = {
       color: "#ddd",
@@ -62,20 +70,20 @@ export default class Preview extends Component {
     return (
       <div>
         <div style={eventPageTopStyle}>
-          <h1 style={eventTitleStyle}>{this.props.previewData.eventName}</h1>
-          <h3 style={eventTimePlaceStyle}>{this.props.previewData.eventStart} • {this.props.previewData.location}</h3>
-          <h3 style={eventOrganizerStyle}>By {this.props.previewData.organizer}</h3>
-          <div style={rsvpButtonStyle}>
-            <button className='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>RSVP</button>
+          <div style={eventTitleDivStyle}>
+            <h1 style={eventInfoStyle}>{this.props.previewData.eventName}</h1>
           </div>
+          <div style={eventInfoStyle}>
+            <h3 style={eventTimePlaceStyle}>{this.props.previewData.eventStart}<br />•<br />{this.props.previewData.location}</h3>
+            <h3>By {this.props.previewData.organizer}</h3>
+          </div>
+          <div style={rsvpButtonStyle}><button className='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>RSVP</button></div>
         </div>
         <div style={eventPageBottomStyle}>
           <div style={eventDescriptionDivStyle}>
             <h4 style={eventDescriptionStyle}>{this.props.previewData.eventDescription}</h4>
           </div>
-          <div style={rsvpButtonStyle}>
-            <button className='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>RSVP</button>
-          </div>
+          <div style={rsvpButtonStyle}><button className='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>RSVP</button></div>
           <div style={rsvpButtonStyle}>
             <button style={modifyPreviewButtonStyle} className='mdl-button mdl-js-button mdl-button--raised mdl-button--colored' onClick={this.goModifyPreview.bind(this)}>Edit</button>
             <button style={publishButtonStyle} className='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' onClick={this.publishEvent.bind(this)}>Publish</button>
