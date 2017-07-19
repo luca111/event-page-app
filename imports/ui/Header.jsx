@@ -26,7 +26,7 @@ export default class Header extends Component {
         { this.props.currentUser? (
             <div className='mdc-toolbar__row' style={navbarStyle}>
               <section className='mdc-toolbar__section mdc-toolbar__section--align-start' style={headerElementStyle}>
-                <Link to='/myevents' className='material-icons mdc-toolbar__icon--menu'><h4 style={{fontFamily: 'Gloria Hallelujah, cursive'}}>Event Pages App</h4></Link>
+                <Link to='/' className='material-icons mdc-toolbar__icon--menu'><h4 style={{fontFamily: 'Gloria Hallelujah, cursive'}}>Event Pages App</h4></Link>
               </section>
               <section className='mdc-toolbar__section mdc-toolbar__section--align-start' style={headerElementStyle}>
                 <NavLink to='/newevent' className='material-icons mdc-toolbar__icon--menu' style={{textDecoration: 'none'}}><h4>Create Event</h4></NavLink>
@@ -42,7 +42,7 @@ export default class Header extends Component {
           (
             <div className='mdc-toolbar__row' style={navbarStyle}>
               <section className='mdc-toolbar__section' style={headerElementStyle}>
-                <Link to='/myevents' className='material-icons mdc-toolbar__icon--menu' style={{textDecoration: 'none'}}><h4 style={{fontFamily: 'Gloria Hallelujah, cursive'}}>Events Page App</h4></Link>
+                <Link to='/' className='material-icons mdc-toolbar__icon--menu' style={{textDecoration: 'none'}}><h4 style={{fontFamily: 'Gloria Hallelujah, cursive'}}>Events Page App</h4></Link>
               </section>
               <section className='mdc-toolbar__section' style={headerElementStyle}>
                 <h4 className='mdc-toolbar__icon--menu' style={{textDecoration: 'none'}}><Accounts /></h4>

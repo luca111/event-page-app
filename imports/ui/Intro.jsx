@@ -164,20 +164,20 @@ export default class Intro extends Component {
         <div style={introSecondSectionStyle}>
           <h2 style={secondSectionTitle}>Create a unique page that you can share and manage</h2>
           <div style={benefitDivStyle}>
-            <div class='mdc-card' style={cardStyle}>
-              <section class='mdc-card__media' style={firstCardImgStyle}></section>
+            <div style={cardStyle}>
+              <section style={firstCardImgStyle}></section>
               <section style={mdcCardSupportingTextStyle}>
                 Easily create a beautiful page for your event
               </section>
             </div>
-            <div class='mdc-card' style={cardStyle}>
-              <section class='mdc-card__media' style={secondCardImgStyle}></section>
+            <div style={cardStyle}>
+              <section style={secondCardImgStyle}></section>
               <section style={mdcCardSupportingTextStyle}>
                 Simple signup for the attendants
               </section>
             </div>
-            <div class='mdc-card' style={cardStyle}>
-              <section class='mdc-card__media' style={thirdCardImgStyle}></section>
+            <div style={cardStyle}>
+              <section style={thirdCardImgStyle}></section>
               <section style={mdcCardSupportingTextStyle}>
                 Get the full list of attendants with their details
               </section>
@@ -188,24 +188,24 @@ export default class Intro extends Component {
         <div  style={introThirdSectionStyle}>
           <h3 style={thirdSectionTitle}>What people say about us</h3>
           <div style={testimonialsDivStyle}>
-            <div class='mdc-card' style={testimonialStyle}>
-              <section class='mdc-card__media' style={firstTestimonialImgStyle}></section>
+            <div style={testimonialStyle}>
+              <section style={firstTestimonialImgStyle}></section>
               <section style={mdcCardSupportingTextStyle}>
                 <span style={testimonialNameStyle}>Adam</span>
                 <br />
                 <span style={testimonialQuoteStyle}>Thanks to this site, creating pages for events has become a breeze!</span>
               </section>
             </div>
-            <div class='mdc-card' style={testimonialStyle}>
-              <section class='mdc-card__media' style={secondTestimonialImgStyle}></section>
+            <div style={testimonialStyle}>
+              <section style={secondTestimonialImgStyle}></section>
               <section style={mdcCardSupportingTextStyle}>
                 <span style={testimonialNameStyle}>Sophie</span>
                 <br />
                 <span style={testimonialQuoteStyle}>If you need a page for your event, look no further!</span>
               </section>
             </div>
-            <div class='mdc-card' style={testimonialStyle}>
-              <section class='mdc-card__media' style={thirdTestimonialImgStyle}></section>
+            <div style={testimonialStyle}>
+              <section style={thirdTestimonialImgStyle}></section>
               <section style={mdcCardSupportingTextStyle}>
                 <span style={testimonialNameStyle}>Mark</span>
                 <br />
