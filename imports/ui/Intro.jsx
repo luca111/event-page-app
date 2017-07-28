@@ -11,7 +11,7 @@ export default class Intro extends Component {
     const introCaptionStyle = {
       textAlign: 'center',
       position: 'relative',
-      top: '25vh',
+      top: '22vh',
       fontFamily: 'Roboto, sans-serif'
     }
     const introTopStartButtonStyle = {
