@@ -97,7 +97,7 @@ export default class Intro extends Component {
       width: '22vw'
     }
     const firstTestimonialImgStyle = {
-      backgroundImage: 'url(' + "images/testimonial1.jpg" + ')',
+      backgroundImage: 'url(' + "images/fictional_character1.jpg" + ')',
       borderRadius: '50%',
       backgroundSize: 'cover',
       height: '22vw',
@@ -107,7 +107,7 @@ export default class Intro extends Component {
       objectPosition: 'center'
     }
     const secondTestimonialImgStyle = {
-      backgroundImage: 'url(' + "images/testimonial2.jpeg" + ')',
+      backgroundImage: 'url(' + "images/fictional_character2.jpeg" + ')',
       borderRadius: '50%',
       backgroundSize: 'cover',
       height: '22vw',
@@ -117,7 +117,7 @@ export default class Intro extends Component {
       objectPosition: 'center'
     }
     const thirdTestimonialImgStyle = {
-      backgroundImage: 'url(' + "images/testimonial3.jpeg" + ')',
+      backgroundImage: 'url(' + "images/fictional_character3.jpeg" + ')',
       borderRadius: '50%',
       backgroundSize: 'cover',
       height: '22vw',
@@ -191,7 +191,7 @@ export default class Intro extends Component {
             <div style={testimonialStyle}>
               <section style={firstTestimonialImgStyle}></section>
               <section style={mdcCardSupportingTextStyle}>
-                <span style={testimonialNameStyle}>Adam</span>
+                <span style={testimonialNameStyle}>Adam (fictional character)</span>
                 <br />
                 <span style={testimonialQuoteStyle}>Thanks to this site, creating pages for events has become a breeze!</span>
               </section>
@@ -199,7 +199,7 @@ export default class Intro extends Component {
             <div style={testimonialStyle}>
               <section style={secondTestimonialImgStyle}></section>
               <section style={mdcCardSupportingTextStyle}>
-                <span style={testimonialNameStyle}>Sophie</span>
+                <span style={testimonialNameStyle}>Sophie (fictional character)</span>
                 <br />
                 <span style={testimonialQuoteStyle}>If you need a page for your event, look no further!</span>
               </section>
@@ -207,7 +207,7 @@ export default class Intro extends Component {
             <div style={testimonialStyle}>
               <section style={thirdTestimonialImgStyle}></section>
               <section style={mdcCardSupportingTextStyle}>
-                <span style={testimonialNameStyle}>Mark</span>
+                <span style={testimonialNameStyle}>Mark (fictional character)</span>
                 <br />
                 <span style={testimonialQuoteStyle}>Definitely the best site around for creating an event page.</span>
               </section>
